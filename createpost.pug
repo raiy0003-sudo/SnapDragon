@@ -1,0 +1,54 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Snap Dragon - Create Post
+  link(rel='stylesheet' href='css/style.css')
+  script(src='js/data.js' defer='')
+  script(src='js/main.js' defer='')
+  script(src='js/createpost.js' defer='')
+header.site-header
+  .container
+    h1 Snap Dragon
+    p.tagline
+      | A safe space where you can express your mental health struggles, share experiences and find comfort in knowing you are not alone.
+nav.site-nav
+  .container.nav-container
+    ul.nav-links.left-nav
+      li
+        a(href='index.html') Home
+      li
+        a(href='createpost.html') Create Post
+    ul#navAuth.nav-links.right-nav
+main.container
+  section.card
+    h2 Create a Post
+    form#createPostForm(novalidate='')
+      .form-group
+        label(for='postUsername') Username
+        input#postUsername(type='text' placeholder='ex. user1234')
+        small#postUsernameError.error
+      .form-group
+        label(for='postTitle') Title
+        input#postTitle(type='text' placeholder='ex. Tired all the time')
+        small#postTitleError.error
+      .form-group
+        label(for='postCategory') Category
+        select#postCategory
+          option(value='') Choose a category
+          option(value='Burnout') Burnout
+          option(value='Anxiety') Anxiety
+          option(value='Loneliness') Loneliness
+          option(value='School Stress') School Stress
+          option(value='Relationship') Relationship
+          option(value='Self-Worth') Self-Worth
+        small#postCategoryError.error
+      .form-group
+        label(for='postContent') Journal Entry
+        small#postContentError.error
+      textarea#postContent(rows='10')
+      button(type='submit') Publish Post
+      p#postSuccess.success.hidden Your post was added successfully.
+footer.site-footer
+  .container
+    p &copy; 2026 Snap Dragon.

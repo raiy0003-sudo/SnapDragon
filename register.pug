@@ -1,0 +1,51 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Snap Dragon - Register
+  link(rel='stylesheet' href='css/style.css')
+  script(src='js/data.js' defer='')
+  script(src='js/main.js' defer='')
+  script(src='js/auth.js' defer='')
+header.site-header
+  .container
+    h1 Snap Dragon
+    p.tagline
+      | A safe space where you can express your mental health struggles, share experiences and find comfort in knowing you are not alone.
+nav.site-nav
+  .container.nav-container
+    ul.nav-links.left-nav
+      li
+        a(href='index.html') Home
+      li
+        a(href='createpost.html') Create Post
+    ul#navAuth.nav-links.right-nav
+main.container
+  section.card.form-card
+    h2 Register
+    form#registerForm(novalidate='')
+      .form-group
+        label(for='registerUsername') Username
+        input#registerUsername(type='text' placeholder='ex. user1234')
+        small#registerUsernameError.error
+      .form-group
+        label(for='registerEmail') Email
+        input#registerEmail(type='text' placeholder='Enter your email')
+        small#registerEmailError.error
+      .form-group
+        label(for='registerPassword') Password
+        input#registerPassword(type='password' placeholder='Create your password')
+        small#registerPasswordError.error
+      .form-group
+        label(for='confirmPassword') Confirm Password
+        input#confirmPassword(type='password' placeholder='Confirm your password')
+        small#confirmPasswordError.error
+      button(type='submit') Create Account
+      p#registerGlobalError.error
+    p.form-note
+      | Already have an account? 
+      a(href='login.html') Login here
+      | .
+footer.site-footer
+  .container
+    p &copy; 2026 Snap Dragon.

@@ -1,0 +1,58 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Snap Dragon - Home
+  link(rel='stylesheet' href='css/style.css')
+  script(src='js/data.js' defer='')
+  script(src='js/main.js' defer='')
+  script(src='js/home.js' defer='')
+header.site-header
+  .container.header-center
+    .logo-title
+      img.logo(src='image/snapdragon logo.jpg' alt='Snap Dragon Logo')
+      h1 Snap Dragon
+    p.tagline
+      | A safe space where you can express your mental health struggles, share experiences and find comfort in knowing you are not alone.
+nav.site-nav
+  .container.nav-container
+    ul.nav-links.left-nav
+      li
+        a(href='index.html') Home
+      li
+        a(href='createpost.html') Create Post
+    ul#navAuth.nav-links.right-nav
+main.container
+  section.hero-section.card
+    h2 Browse Posts
+    p
+      | Read honest experiences, offer encouragement and remember that healing does not have to happen alone.
+  section.card
+    h2 Search Posts
+    form#searchForm.search-form(novalidate='')
+      .form-group
+        label(for='keyword') Search by keyword
+        input#keyword(type='text' placeholder='stress, school, lonely, tired')
+      .form-group
+        label(for='category') Filter by category
+        select#category
+          option(value='') All Categories
+          option(value='Burnout') Burnout
+          option(value='Anxiety') Anxiety
+          option(value='Loneliness') Loneliness
+          option(value='School Stress') School Stress
+          option(value='Relationship') Relationship
+          option(value='Self-Worth') Self-Worth
+      .form-group.button-group
+        button(type='submit') Search
+  section.card
+    .section-top
+      h2 Recent Posts
+      p#resultsText Showing all posts
+    #postsContainer.posts-grid
+    .center-row
+      button#loadMoreBtn(type='button') Load More
+    p#emptyMessage.empty-message.hidden No posts matched your search.
+footer.site-footer
+  .container
+    p &copy; 2026 Snap Dragon. A gentle reminder that your feelings matter.

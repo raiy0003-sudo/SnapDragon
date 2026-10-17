@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snap Dragon - Create Post</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/createpost.js" defer></script>
+</head>
+<body data-page="create">
+
+  <header class="site-header">
+    <div class="container">
+      <h1>Snap Dragon</h1>
+      <p class="tagline">A safe space where you can express your mental health struggles, share experiences and find comfort in knowing you are not alone.</p>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="container nav-container">
+      <ul class="nav-links left-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="createpost.html">Create Post</a></li>
+      </ul>
+
+      <ul class="nav-links right-nav" id="navAuth">
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>Create a Post</h2>
+
+      <form id="createPostForm" novalidate>
+        <div class="form-group">
+          <label for="postUsername">Username</label>
+          <input type="text" id="postUsername" placeholder="ex. user1234">
+          <small class="error" id="postUsernameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="postTitle">Title</label>
+          <input type="text" id="postTitle" placeholder="ex. Tired all the time">
+          <small class="error" id="postTitleError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="postCategory">Category</label>
+          <select id="postCategory">
+            <option value="">Choose a category</option>
+            <option value="Burnout">Burnout</option>
+            <option value="Anxiety">Anxiety</option>
+            <option value="Loneliness">Loneliness</option>
+            <option value="School Stress">School Stress</option>
+            <option value="Relationship">Relationship</option>
+            <option value="Self-Worth">Self-Worth</option>
+          </select>
+          <small class="error" id="postCategoryError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="postContent">Journal Entry</label>
+          <small class="error" id="postContentError"></small>
+        </div>
+        <textarea id="postContent" rows="10"></textarea>
+        <button type="submit">Publish Post</button>
+        <p id="postSuccess" class="success hidden">Your post was added successfully.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Snap Dragon.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

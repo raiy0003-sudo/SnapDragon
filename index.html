@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snap Dragon - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/home.js" defer></script>
+  
+
+</head>
+<body data-page="home">
+
+  <header class="site-header">
+    <div class="container header-center">
+
+    <div class="logo-title">
+      <img src="image/snapdragon logo.jpg" alt="Snap Dragon Logo" class="logo">
+      <h1>Snap Dragon</h1>
+    </div>
+
+    <p class="tagline">
+      A safe space where you can express your mental health struggles, share experiences and find comfort in knowing you are not alone.
+    </p>
+
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="container nav-container">
+      <ul class="nav-links left-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="createpost.html">Create Post</a></li>
+      </ul>
+
+      <ul class="nav-links right-nav" id="navAuth">
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero-section card">
+      <h2>Browse Posts</h2>
+      <p>Read honest experiences, offer encouragement and remember that healing does not have to happen alone.</p>
+    </section>
+
+    <section class="card">
+      <h2>Search Posts</h2>
+      <form id="searchForm" class="search-form" novalidate>
+        <div class="form-group">
+          <label for="keyword">Search by keyword</label>
+          <input type="text" id="keyword" placeholder="stress, school, lonely, tired">
+        </div>
+
+        <div class="form-group">
+          <label for="category">Filter by category</label>
+          <select id="category">
+            <option value="">All Categories</option>
+            <option value="Burnout">Burnout</option>
+            <option value="Anxiety">Anxiety</option>
+            <option value="Loneliness">Loneliness</option>
+            <option value="School Stress">School Stress</option>
+            <option value="Relationship">Relationship</option>
+            <option value="Self-Worth">Self-Worth</option>
+          </select>
+        </div>
+
+        <div class="form-group button-group">
+          <button type="submit">Search</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="section-top">
+        <h2>Recent Posts</h2>
+        <p id="resultsText">Showing all posts</p>
+      </div>
+
+      <div id="postsContainer" class="posts-grid"></div>
+
+      <div class="center-row">
+        <button id="loadMoreBtn" type="button">Load More</button>
+      </div>
+
+      <p id="emptyMessage" class="empty-message hidden">No posts matched your search.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Snap Dragon. A gentle reminder that your feelings matter.</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

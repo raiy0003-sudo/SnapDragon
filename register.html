@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snap Dragon - Register</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</head>
+<body data-page="register">
+
+  <header class="site-header">
+    <div class="container">
+      <h1>Snap Dragon</h1>
+      <p class="tagline">A safe space where you can express your mental health struggles, share experiences and find comfort in knowing you are not alone.</p>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="container nav-container">
+      <ul class="nav-links left-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="createpost.html">Create Post</a></li>
+      </ul>
+
+      <ul class="nav-links right-nav" id="navAuth">
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card form-card">
+      <h2>Register</h2>
+
+      <form id="registerForm" novalidate>
+        <div class="form-group">
+          <label for="registerUsername">Username</label>
+          <input type="text" id="registerUsername" placeholder="ex. user1234">
+          <small class="error" id="registerUsernameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="registerEmail">Email</label>
+          <input type="text" id="registerEmail" placeholder="Enter your email">
+          <small class="error" id="registerEmailError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="registerPassword">Password</label>
+          <input type="password" id="registerPassword" placeholder="Create your password">
+          <small class="error" id="registerPasswordError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" placeholder="Confirm your password">
+          <small class="error" id="confirmPasswordError"></small>
+        </div>
+
+        <button type="submit">Create Account</button>
+        <p class="error" id="registerGlobalError"></p>
+      </form>
+
+      <p class="form-note">Already have an account? <a href="login.html">Login here</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Snap Dragon.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
